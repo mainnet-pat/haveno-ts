@@ -13,7 +13,13 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
+var global =
+    (typeof globalThis !== 'undefined' && globalThis) ||
+    (typeof window !== 'undefined' && window) ||
+    (typeof global !== 'undefined' && global) ||
+    (typeof self !== 'undefined' && self) ||
+    (function () { return this; }).call(null) ||
+    Function('return this')();
 
 goog.exportSymbol('proto.io.haveno.protobuffer.AccountAgeWitness', null, global);
 goog.exportSymbol('proto.io.haveno.protobuffer.AccountAgeWitnessStore', null, global);
@@ -8775,7 +8781,8 @@ proto.io.haveno.protobuffer.GetInventoryResponse.prototype.getInventoryMap = fun
  */
 proto.io.haveno.protobuffer.GetInventoryResponse.prototype.clearInventoryMap = function() {
   this.getInventoryMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -20741,7 +20748,8 @@ proto.io.haveno.protobuffer.RemovedPayloadsMap.prototype.getDateByHashesMap = fu
  */
 proto.io.haveno.protobuffer.RemovedPayloadsMap.prototype.clearDateByHashesMap = function() {
   this.getDateByHashesMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -20874,7 +20882,8 @@ proto.io.haveno.protobuffer.IgnoredMailboxMap.prototype.getDataMap = function(op
  */
 proto.io.haveno.protobuffer.IgnoredMailboxMap.prototype.clearDataMap = function() {
   this.getDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -22004,7 +22013,8 @@ proto.io.haveno.protobuffer.Alert.prototype.getExtraDataMap = function(opt_noLaz
  */
 proto.io.haveno.protobuffer.Alert.prototype.clearExtraDataMap = function() {
   this.getExtraDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -22487,7 +22497,8 @@ proto.io.haveno.protobuffer.Arbitrator.prototype.getExtraDataMap = function(opt_
  */
 proto.io.haveno.protobuffer.Arbitrator.prototype.clearExtraDataMap = function() {
   this.getExtraDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -22952,7 +22963,8 @@ proto.io.haveno.protobuffer.Mediator.prototype.getExtraDataMap = function(opt_no
  */
 proto.io.haveno.protobuffer.Mediator.prototype.clearExtraDataMap = function() {
   this.getExtraDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -23417,7 +23429,8 @@ proto.io.haveno.protobuffer.RefundAgent.prototype.getExtraDataMap = function(opt
  */
 proto.io.haveno.protobuffer.RefundAgent.prototype.clearExtraDataMap = function() {
   this.getExtraDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -24032,7 +24045,8 @@ proto.io.haveno.protobuffer.Filter.prototype.getExtraDataMap = function(opt_noLa
  */
 proto.io.haveno.protobuffer.Filter.prototype.clearExtraDataMap = function() {
   this.getExtraDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -25066,7 +25080,8 @@ proto.io.haveno.protobuffer.TradeStatistics3.prototype.getExtraDataMap = functio
  */
 proto.io.haveno.protobuffer.TradeStatistics3.prototype.clearExtraDataMap = function() {
   this.getExtraDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -25358,7 +25373,8 @@ proto.io.haveno.protobuffer.MailboxStoragePayload.prototype.getExtraDataMap = fu
  */
 proto.io.haveno.protobuffer.MailboxStoragePayload.prototype.clearExtraDataMap = function() {
   this.getExtraDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -26618,7 +26634,8 @@ proto.io.haveno.protobuffer.OfferPayload.prototype.getExtraDataMap = function(op
  */
 proto.io.haveno.protobuffer.OfferPayload.prototype.clearExtraDataMap = function() {
   this.getExtraDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -28647,7 +28664,8 @@ proto.io.haveno.protobuffer.Dispute.prototype.getExtraDataMap = function(opt_noL
  */
 proto.io.haveno.protobuffer.Dispute.prototype.clearExtraDataMap = function() {
   this.getExtraDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -31377,7 +31395,8 @@ proto.io.haveno.protobuffer.PaymentAccountPayload.prototype.getExcludeFromJsonDa
  */
 proto.io.haveno.protobuffer.PaymentAccountPayload.prototype.clearExcludeFromJsonDataMap = function() {
   this.getExcludeFromJsonDataMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -56443,7 +56462,8 @@ proto.io.haveno.protobuffer.PreferencesPayload.prototype.getDontShowAgainMapMap 
  */
 proto.io.haveno.protobuffer.PreferencesPayload.prototype.clearDontShowAgainMapMap = function() {
   this.getDontShowAgainMapMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -56754,7 +56774,8 @@ proto.io.haveno.protobuffer.PreferencesPayload.prototype.getPeerTagMapMap = func
  */
 proto.io.haveno.protobuffer.PreferencesPayload.prototype.clearPeerTagMapMap = function() {
   this.getPeerTagMapMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -58912,7 +58933,8 @@ proto.io.haveno.protobuffer.UserPayload.prototype.getCookieMap = function(opt_no
  */
 proto.io.haveno.protobuffer.UserPayload.prototype.clearCookieMap = function() {
   this.getCookieMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**

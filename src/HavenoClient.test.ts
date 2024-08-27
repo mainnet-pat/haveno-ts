@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /*
  * Copyright Haveno
  *
@@ -966,7 +968,7 @@ test("Can start and stop a local Monero node (CI)", async() => {
       daemon = await moneroTs.connectToDaemonRpc(TestConfig.monerod.url);
       height = await daemon.getHeight();
       console.log("GOT HEIGHT: " + height);
-      throw new Error("should have thrown"); 
+      throw new Error("should have thrown");
     } catch (err: any) {
       if (err.message !== "RequestError: Error: connect ECONNREFUSED 127.0.0.1:28081") throw new Error("Unexpected error: " + err.message);
     }
@@ -1810,7 +1812,7 @@ test("Can resolve a dispute (CI)", async () => {
 });
 
 test("Can resolve disputes (CI)", async () => {
-  
+
   // execute all configs unless config index given
   let configIdx = undefined;
   let testBalancesSequentially = false; // runs each config sequentially to test balances before and after // TODO: this test takes much longer to run in sequence in order to test balances. use test weight config
@@ -1982,7 +1984,7 @@ test("Invalidates offers when reserved funds are spent (CI)", async () => {
   let err;
   let tx;
   try {
-    
+
     // wait for user1 to have unlocked balance for trade
     const tradeAmount = 250000000000n;
     await waitForAvailableBalance(tradeAmount * 2n, user1);

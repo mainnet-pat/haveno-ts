@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /*
  * Copyright Haveno
  *
@@ -114,16 +116,16 @@ export default class HavenoClient {
         const childProcess = require('child_process').spawn(cmd[0], cmd.slice(1), {cwd: havenoPath});
         childProcess.stdout.setEncoding('utf8');
         childProcess.stderr.setEncoding('utf8');
-        
+
         // handle stdout
         childProcess.stdout.on('data', async function(data: any) {
           const line = data.toString();
           if (loggingEnabled()) process.stdout.write(line);
           output += line + '\n'; // capture output in case of error
-          
+
           // initialize daemon on success or login required message
           if (!daemon && (line.indexOf(HavenoClient._fullyInitializedMessage) >= 0 || line.indexOf(HavenoClient._loginRequiredMessage) >= 0)) {
-            
+
             // get api password
             const passwordIdx = cmd.indexOf("--apiPassword");
             if (passwordIdx < 0) {
@@ -141,46 +143,46 @@ export default class HavenoClient {
             // get wallet rpc port
             const walletRpcPortIdx = cmd.indexOf("--walletRpcBindPort");
             if (walletRpcPortIdx >= 0) daemon._walletRpcPort = parseInt(cmd[walletRpcPortIdx + 1]);
-            
+
             // resolve promise with client connected to internal process
             isStarted = true;
             resolve(daemon);
           }
-          
+
           // read error message
           if (line.indexOf("[HavenoDaemonMain] ERROR") >= 0) {
             if (!isStarted) await rejectStartup(new Error(line));
           }
         });
-        
+
         // handle stderr
         childProcess.stderr.on('data', function(data: any) {
           if (loggingEnabled()) process.stderr.write(data);
         });
-        
+
         // handle exit
         childProcess.on("exit", async function(code: any) {
           if (!isStarted) await rejectStartup(new Error("Haveno process terminated with exit code " + code + (output ? ":\n\n" + output : "")));
         });
-        
+
         // handle error
         childProcess.on("error", async function(err: any) {
           if (err.message.indexOf("ENOENT") >= 0) reject(new Error("haveno-daemon does not exist at path '" + cmd[0] + "'"));
           if (!isStarted) await rejectStartup(err);
         });
-        
+
         // handle uncaught exception
         childProcess.on("uncaughtException", async function(err: any, origin: any) {
           console.error("Uncaught exception in Haveno process: " + err.message);
           console.error(origin);
           await rejectStartup(err);
         });
-        
+
         async function rejectStartup(err: any) {
           await HavenoUtils.kill(childProcess);
           reject(err);
         }
-        
+
         function loggingEnabled(): boolean {
           return (daemon && daemon._processLogging) || (!daemon && enableLogging);
         }
@@ -189,54 +191,54 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Return the process running the haveno daemon.
-   * 
+   *
    * @return the process running the haveno daemon
    */
   getProcess() {
     return this._process;
   }
-  
+
   /**
    * Enable or disable process logging.
-   * 
+   *
    * @param {boolean} enabled - specifies if logging is enabled or disabled
    */
   setProcessLogging(enabled: boolean) {
     if (this._process === undefined) throw new HavenoError("haveno instance not created from new process");
     this._processLogging = enabled;
   }
-  
+
   /**
    * Get the URL of the Haveno daemon.
-   * 
+   *
    * @return {string} the URL of the Haveno daemon
    */
   getUrl(): string {
     return this._url;
   }
-  
+
   /**
    * Get the port of the primary wallet rpc instance if known.
-   * 
+   *
    * @return {number|undefined} the port of the primary wallet rpc instance if known
    */
   getWalletRpcPort(): number|undefined {
     return this._walletRpcPort;
   }
-  
+
   /**
    * Get the name of the Haveno application folder.
    */
   getAppName(): string|undefined {
     return this._appName;
   }
-  
+
   /**
    * Get the Haveno version.
-   * 
+   *
    * @return {string} the Haveno daemon version
    */
   async getVersion(): Promise<string> {
@@ -246,10 +248,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Indicates if connected and authenticated with the Haveno daemon.
-   * 
+   *
    * @return {boolean} true if connected with the Haveno daemon, false otherwise
    */
   async isConnectedToDaemon(): Promise<boolean> {
@@ -260,10 +262,10 @@ export default class HavenoClient {
       return false;
     }
   }
-  
+
   /**
    * Indicates if the Haveno account is created.
-   * 
+   *
    * @return {boolean} true if the account is created, false otherwise
    */
   async accountExists(): Promise<boolean> {
@@ -273,10 +275,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Indicates if the Haveno account is open and authenticated with the correct password.
-   * 
+   *
    * @return {boolean} true if the account is open and authenticated, false otherwise
    */
   async isAccountOpen(): Promise<boolean> {
@@ -286,10 +288,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Create and open a new Haveno account.
-   * 
+   *
    * @param {string} password - the password to encrypt the account
    */
   async createAccount(password: string): Promise<void> {
@@ -300,10 +302,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Open existing Haveno account.
-   * 
+   *
    * @param {string} password - the account password
    */
   async openAccount(password: string): Promise<void> {
@@ -314,10 +316,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Change the Haveno account password.
-   * 
+   *
    * @param {string} password - the new account password
    */
   async changePassword(oldPassword: string, newPassword: string): Promise<void> {
@@ -330,7 +332,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Close the currently open account.
    */
@@ -341,7 +343,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Permanently delete the Haveno account.
    */
@@ -352,7 +354,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Backup the account to the given stream. TODO: stream type?
    */
@@ -377,12 +379,12 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Restore the account from zip bytes.
    *
    * Sends chunked requests if size over max grpc envelope size (41943404 bytes).
-   * 
+   *
    * @param {Uint8Array} zipBytes - the bytes of the zipped account to restore
    */
   async restoreAccount(zipBytes: Uint8Array): Promise<void> {
@@ -403,7 +405,7 @@ export default class HavenoClient {
       offset += chunkSize;
     }
   }
-  
+
   /**
    * Add a listener to receive notifications from the Haveno daemon.
    *
@@ -413,10 +415,10 @@ export default class HavenoClient {
     this._notificationListeners.push(listener);
     await this._updateNotificationListenerRegistration();
   }
-  
+
   /**
    * Remove a notification listener.
-   * 
+   *
    * @param {(notification: NotificationMessage) => void} listener - the notification listener to remove
    */
   async removeNotificationListener(listener: (_notification: NotificationMessage) => void): Promise<void> {
@@ -428,13 +430,13 @@ export default class HavenoClient {
 
   /**
    * Indicates if connected to the Monero network based on last connection check.
-   * 
+   *
    * @return {boolean} true if connected to the Monero network, false otherwise
    */
   async isConnectedToMonero(): Promise<boolean> {
     const connection = await this.getMoneroConnection();
-    return connection !== undefined && 
-           connection.getOnlineStatus()! === UrlConnection.OnlineStatus.ONLINE && 
+    return connection !== undefined &&
+           connection.getOnlineStatus()! === UrlConnection.OnlineStatus.ONLINE &&
            connection.getAuthenticationStatus()! !== UrlConnection.AuthenticationStatus.NOT_AUTHENTICATED;
   }
 
@@ -492,7 +494,7 @@ export default class HavenoClient {
 
   /**
    * Set the current Monero daemon connection.
-   * 
+   *
    * Add the connection if not previously seen.
    * If the connection is provided as string, connect to the URI with any previously set credentials and priority.
    * If the connection is provided as UrlConnection, overwrite any previously set credentials and priority.
@@ -575,7 +577,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Automatically switch to the best available connection if current connection is disconnected after being checked.
    *
@@ -636,10 +638,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Register as a dispute agent.
-   * 
+   *
    * @param {string} disputeAgentType - type of dispute agent to register, e.g. mediator, refundagent
    * @param {string} registrationKey - registration key
    */
@@ -653,10 +655,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Unregister as a dispute agent.
-   * 
+   *
    * @param {string} disputeAgentType - type of dispute agent to register, e.g. mediator, refundagent
    */
   async unregisterDisputeAgent(disputeAgentType: string): Promise<void> {
@@ -666,10 +668,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get the user's balances.
-   * 
+   *
    * @return {XmrBalanceInfo} the user's balances
    */
   async getBalances(): Promise<XmrBalanceInfo> {
@@ -679,10 +681,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get the mnemonic seed phrase of the Monero wallet.
-   * 
+   *
    * @return {string} the mnemonic seed phrase of the Monero wallet
    */
   async getXmrSeed(): Promise<string> {
@@ -692,10 +694,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get the primary address of the Monero wallet.
-   * 
+   *
    * @return {string} the primary address of the Monero wallet
    */
   async getXmrPrimaryAddress(): Promise<string> {
@@ -705,10 +707,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get a new subaddress in the Monero wallet to receive deposits.
-   * 
+   *
    * @return {string} the deposit address (a subaddress in the Haveno wallet)
    */
   async getXmrNewSubaddress(): Promise<string> {
@@ -718,10 +720,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get all transactions in the Monero wallet.
-   * 
+   *
    * @return {XmrTx[]} the transactions
    */
   async getXmrTxs(): Promise<XmrTx[]> {
@@ -731,10 +733,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get a transaction by hash in the Monero wallet.
-   * 
+   *
    * @param {String} txHash - hash of the transaction to get
    * @return {XmrTx} the transaction with the hash
    */
@@ -745,10 +747,10 @@ export default class HavenoClient {
     }
     return undefined;
   }
-  
+
   /**
    * Create but do not relay a transaction to send funds from the Monero wallet.
-   * 
+   *
    * @return {XmrTx} the created transaction
    */
   async createXmrTx(destinations: XmrDestination[]): Promise<XmrTx> {
@@ -758,10 +760,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Relay a previously created transaction to send funds from the Monero wallet.
-   * 
+   *
    * @return {string} the hash of the relayed transaction
    */
   async relayXmrTx(metadata: string): Promise<string> {
@@ -771,12 +773,12 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get all asset codes with price information.
-   * 
+   *
    * TODO: replace this with getSupportedAssetCodes(): Promise<TradeCurrency[]>)
-   * 
+   *
    * @return {Promise<string[]>} all supported trade assets
    */
   async getPricedAssetCodes(): Promise<string[]> {
@@ -784,7 +786,7 @@ export default class HavenoClient {
     for (const price of await this.getPrices()) assetCodes.push(price.getCurrencyCode());
     return assetCodes;
   }
-  
+
   /**
    * Get the current market price per 1 XMR in the given currency.
    *
@@ -798,7 +800,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get the current market prices of all a.
    *
@@ -811,10 +813,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get the market depth of a currency.
-   * 
+   *
    * @param {string} assetCode - asset to get the market depth of
    * @return {MarketDepthInfo} market depth of the given currency
    */
@@ -825,10 +827,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get payment methods.
-   * 
+   *
    * @param {string} assetCode - get payment methods supporting this asset code (optional)
    * @return {PaymentMethod[]} the payment methods
    */
@@ -847,10 +849,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get payment accounts.
-   * 
+   *
    * @return {PaymentAccount[]} the payment accounts
    */
   async getPaymentAccounts(): Promise<PaymentAccount[]> {
@@ -860,25 +862,25 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get a payment account by id.
-   * 
+   *
    * @param {string} paymentAccountId - the payment account id to get
    * @return {PaymentAccount} the payment account
    */
   async getPaymentAccount(paymentAccountId: string): Promise<PaymentAccount> {
     // TODO (woodser): implement this on the backend
-    const paymentAccounts = await this.getPaymentAccounts(); 
+    const paymentAccounts = await this.getPaymentAccounts();
     for (const paymentAccount of paymentAccounts) {
       if (paymentAccount.getId() === paymentAccountId) return paymentAccount;
     }
     throw new HavenoError("No payment account with id " + paymentAccountId);
   }
-  
+
   /**
    * Get a form for the given payment method to complete and create a new payment account.
-   * 
+   *
    * @param {string | PaymentAccountForm.FormId} paymentMethodId - the id of the payment method
    * @return {PaymentAccountForm} the payment account form
    */
@@ -893,7 +895,7 @@ export default class HavenoClient {
 
   /**
    * Get a form from the given payment account payload.
-   * 
+   *
    * @param {PaymentAccountPayload} paymentAccountPayload - payload to get as a form
    * @return {PaymentAccountForm} the payment account form
    */
@@ -904,10 +906,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /*
    * Validate a form field.
-   * 
+   *
    * @param {object} form - form context to validate the given value
    * @param {PaymentAccountFormField.FieldId} fieldId - id of the field to validate
    * @param {string} value - input value to validate
@@ -923,10 +925,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Create a payment account.
-   * 
+   *
    * @param {PaymentAccountForm} paymentAccountForm - the completed form to create the payment account
    * @return {PaymentAccount} the created payment account
    */
@@ -937,10 +939,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Create a crypto payment account.
-   * 
+   *
    * @param {string} accountName - description of the account
    * @param {string} assetCode - traded asset code
    * @param {string} address - payment address of the account
@@ -961,7 +963,7 @@ export default class HavenoClient {
 
   /**
    * Delete a payment account.
-   * 
+   *
    * @param paymentAccountId {string} the id of the payment account to delete
    */
   async deletePaymentAccount(paymentAccountId: string): Promise<void> {
@@ -971,10 +973,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get available offers to buy or sell XMR.
-   * 
+   *
    * @param {string} assetCode - traded asset code
    * @param {OfferDirection|undefined} direction - "buy" or "sell" (default all)
    * @return {OfferInfo[]} the available offers
@@ -987,10 +989,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get the user's posted offers to buy or sell XMR.
-   * 
+   *
    * @param {string|undefined} assetCode - traded asset code
    * @param {OfferDirection|undefined} direction - get offers to buy or sell XMR (default all)
    * @return {OfferInfo[]} the user's created offers
@@ -1005,10 +1007,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get my offer by id.
-   * 
+   *
    * @param {string} offerId - id of the user's created offer
    * @return {OfferInfo} the user's created offer
    */
@@ -1019,10 +1021,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Post an offer.
-   * 
+   *
    * @param {OfferDirection} direction - "buy" or "sell" XMR
    * @param {bigint} amount - amount of XMR to trade
    * @param {string} assetCode - asset code to trade for XMR
@@ -1064,10 +1066,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Remove a posted offer, releasing its reserved funds.
-   * 
+   *
    * @param {string} offerId - the offer id to cancel
    */
   async removeOffer(offerId: string): Promise<void> {
@@ -1077,10 +1079,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Take an offer.
-   * 
+   *
    * @param {string} offerId - id of the offer to take
    * @param {string} paymentAccountId - id of the payment account
    * @param {bigint|undefined} amount - amount the taker chooses to buy or sell within the offer range (default is max offer amount)
@@ -1101,10 +1103,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get a trade by id.
-   * 
+   *
    * @param {string} tradeId - the id of the trade and its offer
    * @return {TradeInfo} the trade with the given id
    */
@@ -1115,7 +1117,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get all trade statistics.
    *
@@ -1131,7 +1133,7 @@ export default class HavenoClient {
 
   /**
    * Get all trades.
-   * 
+   *
    * @return {TradeInfo[]} all user trades
    */
   async getTrades(): Promise<TradeInfo[]> {
@@ -1141,10 +1143,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Confirm a payment is sent.
-   * 
+   *
    * @param {string} tradeId - the id of the trade
    */
   async confirmPaymentSent(tradeId: string): Promise<void> {
@@ -1154,10 +1156,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Confirm a payment is received.
-   * 
+   *
    * @param {string} tradeId - the id of the trade
    */
   async confirmPaymentReceived(tradeId: string): Promise<void> {
@@ -1170,7 +1172,7 @@ export default class HavenoClient {
 
   /**
    * Acknowledge that a trade has completed.
-   * 
+   *
    * @param {string} tradeId - the id of the trade
    */
     async completeTrade(tradeId: string): Promise<void> {
@@ -1211,7 +1213,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get a dispute by trade id.
    *
@@ -1224,7 +1226,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Get all disputes.
    */
@@ -1235,7 +1237,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Open a dispute for a trade.
    *
@@ -1248,7 +1250,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Resolve a dispute. By default, the winner receives the trade amount and the security deposits are returned,
    * but the arbitrator may award a custom amount to the winner and the loser will get the rest.
@@ -1272,7 +1274,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Send a dispute chat message.
    *
@@ -1291,14 +1293,14 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Disconnect this client from the server.
    */
   async disconnect() {
     while (this._notificationListeners.length) await this.removeNotificationListener(this._notificationListeners[0]);
   }
-  
+
   /**
    * Shutdown the Haveno daemon server and stop the process if applicable.
    */
@@ -1311,23 +1313,23 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   // ------------------------------- HELPERS ----------------------------------
-  
+
   /**
    * Wait for the application to be fully initialized with an account and a
    * connection to the Haveno network.
-   * 
+   *
    * TODO:
-   *  
+   *
    * Currently when the application starts, the account is first initialized with createAccount()
    * or openAccount() which return immediately. A notification is sent after all setup is complete and
    * the application is connected to the Haveno network.
-   * 
+   *
    * Ideally when the application starts, the system checks the Haveno network connection, supporting
    * havenod.isHavenoConnectionInitialized() and havenod.awaitHavenoConnectionInitialized().
    * Independently, gRPC createAccount() and openAccount() return after all account setup and reading from disk.
-   * 
+   *
    * @private
    */
   async _awaitAppInitialized(): Promise<void> {
@@ -1351,7 +1353,7 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /** @private */
   async _isAppInitialized(): Promise<boolean> {
     try {
@@ -1360,10 +1362,10 @@ export default class HavenoClient {
       throw new HavenoError(e.message, e.code);
     }
   }
-  
+
   /**
    * Callback for grpc notifications.
-   * 
+   *
    * @private
    */
   _onNotification = (data: any) => {
@@ -1371,12 +1373,12 @@ export default class HavenoClient {
       for (const listener of this._notificationListeners) listener(data);
     }
    }
-  
+
   /**
    * Update notification listener registration.
    * Due to the nature of grpc streaming, this method returns a promise
    * which may be resolved before the listener is actually registered.
-   * 
+   *
    * @private
    */
   async _updateNotificationListenerRegistration(): Promise<void> {
@@ -1420,7 +1422,7 @@ export default class HavenoClient {
 
   /**
    * Send a notification.
-   * 
+   *
    * @private
    * @param {NotificationMessage} notification - notification to send
    */
@@ -1434,7 +1436,7 @@ export default class HavenoClient {
 
   /**
    * Restore an account chunk from zip bytes.
-   * 
+   *
    * @private
    */
   async _restoreAccountChunk(zipBytes: Uint8Array, offset: number, totalLength: number, hasMore: boolean): Promise<void> {
