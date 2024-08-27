@@ -1,0 +1,11 @@
+import { connectToWalletRpc, MoneroWalletRpc } from  "monero-ts";
+
+test("kek", async () => {
+
+const wallet = await connectToWalletRpc("http://localhost:28084", "rpc_user", "abc123");
+wallet.openWallet("test_wallet_1", "supersecretpassword");
+const height = await wallet.getHeight();
+const balance = await wallet.getBalance();
+console.log(height, balance);
+
+});
