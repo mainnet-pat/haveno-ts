@@ -12,8 +12,7 @@
     "test": "node --no-experimental-fetch ./node_modules/.bin/jest --detectOpenHandles --forceExit",
     "eslint": "eslint .",
     "eslintfix": "eslint src/* --fix",
-    "typedoc": "typedoc ./src/index.ts --entryPointStrategy expand src/ --exclude **/*.test.ts --excludePrivate",
-    "postinstall": "patch-package"
+    "typedoc": "typedoc ./src/index.ts --entryPointStrategy expand src/ --exclude **/*.test.ts --excludePrivate"
   },
   "repository": {
     "type": "git",
@@ -47,9 +46,8 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "jest": "^29.7.0",
-    "monero-ts": "^0.10.1",
+    "monero-ts": "github:mainnet-pat/monero-ts#0ee1ed53f7db70c553db60d3f0244623e6531da0",
     "node-xmlhttprequest": "^1.0.6",
-    "patch-package": "^8.0.0",
     "ts-jest": "^29.2.5",
     "ts-jest-resolver": "^2.0.1",
     "typedoc": "^0.23.26",
