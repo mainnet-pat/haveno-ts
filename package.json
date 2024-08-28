@@ -12,7 +12,8 @@
     "test": "node --no-experimental-fetch ./node_modules/.bin/jest",
     "eslint": "eslint .",
     "eslintfix": "eslint src/* --fix",
-    "typedoc": "typedoc ./src/index.ts --entryPointStrategy expand src/ --exclude **/*.test.ts --excludePrivate"
+    "typedoc": "typedoc ./src/index.ts --entryPointStrategy expand src/ --exclude **/*.test.ts --excludePrivate",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,7 @@
     "jest": "^29.7.0",
     "monero-ts": "^0.10.1",
     "node-xmlhttprequest": "^1.0.6",
+    "patch-package": "^8.0.0",
     "ts-jest": "^29.2.5",
     "ts-jest-resolver": "^2.0.1",
     "typedoc": "^0.23.26",

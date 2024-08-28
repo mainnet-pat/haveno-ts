@@ -1,4 +1,9 @@
 "use strict";
+// @ts-nocheck
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Copyright Haveno
  *
@@ -14,10 +19,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 const console_1 = __importDefault(require("console"));
 const HavenoError_1 = __importDefault(require("./types/HavenoError"));
 const HavenoUtils_1 = __importDefault(require("./utils/HavenoUtils"));

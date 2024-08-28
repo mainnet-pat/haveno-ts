@@ -1,0 +1,12 @@
+diff --git a/node_modules/monero-ts/dist/src/main/ts/common/HttpClient.js b/node_modules/monero-ts/dist/src/main/ts/common/HttpClient.js
+index e063ade..c141866 100644
+--- a/node_modules/monero-ts/dist/src/main/ts/common/HttpClient.js
++++ b/node_modules/monero-ts/dist/src/main/ts/common/HttpClient.js
+@@ -140,6 +140,7 @@ class HttpClient {
+             resolve(resp);
+           }).catch(function (error) {
+             if (error.response?.status) resolve(error.response);
++            console.err(error);
+             reject(new Error("Request failed without response: " + method + " " + uri));
+           });
+         });
