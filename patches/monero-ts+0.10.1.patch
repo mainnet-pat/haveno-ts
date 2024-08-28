@@ -1,12 +1,33 @@
 diff --git a/node_modules/monero-ts/dist/src/main/ts/common/HttpClient.js b/node_modules/monero-ts/dist/src/main/ts/common/HttpClient.js
-index e063ade..b082d14 100644
+index e063ade..6c79ae4 100644
 --- a/node_modules/monero-ts/dist/src/main/ts/common/HttpClient.js
 +++ b/node_modules/monero-ts/dist/src/main/ts/common/HttpClient.js
-@@ -140,6 +140,7 @@ class HttpClient {
+@@ -140,7 +140,7 @@ class HttpClient {
              resolve(resp);
            }).catch(function (error) {
              if (error.response?.status) resolve(error.response);
-+            console.error(error);
-             reject(new Error("Request failed without response: " + method + " " + uri));
+-            reject(new Error("Request failed without response: " + method + " " + uri));
++            reject(new Error("Request failed without response: " + method + " " + uri + " due to underlying errror:\n" + error.message + "\n" + error.stack));
            });
          });
+ 
+@@ -184,7 +184,8 @@ class HttpClient {
+       httpAgent: url.startsWith("https") ? undefined : HttpClient.getHttpAgent(),
+       httpsAgent: url.startsWith("https") ? HttpClient.getHttpsAgent() : undefined,
+       data: body,
+-      transformResponse: (res) => res
++      transformResponse: (res) => res,
++      adapter: ['http', 'xhr', 'fetch'],
+     }).catch(async (err) => {
+       if (err.response?.status === 401) {
+         let authHeader = err.response.headers['www-authenticate'].replace(/,\sDigest.*/, "");
+@@ -230,7 +231,8 @@ class HttpClient {
+           httpAgent: url.startsWith("https") ? undefined : HttpClient.getHttpAgent(),
+           httpsAgent: url.startsWith("https") ? HttpClient.getHttpsAgent() : undefined,
+           data: body,
+-          transformResponse: (res) => res
++          transformResponse: (res) => res,
++          adapter: ['http', 'xhr', 'fetch'],
+         });
+ 
+         return finalResponse;
