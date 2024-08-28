@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Docker version
+        run: docker --version
+
       - name: Checkout
         uses: actions/checkout@v4
 
