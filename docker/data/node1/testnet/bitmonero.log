@@ -1,0 +1,95 @@
+2024-08-28 12:27:20.369	    ffff95634010	INFO	logging	contrib/epee/src/mlog.cpp:273	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.ssl:FATAL,net.p2p:FATAL,net.cn:FATAL,daemon.rpc:FATAL,global:INFO,verify:FATAL,serialization:FATAL,daemon.rpc.payment:ERROR,stacktrace:INFO,logging:INFO,msgwriter:INFO
+2024-08-28 12:27:20.369	    ffff95634010	INFO	global	src/daemon/main.cpp:309	Monero 'Fluorine Fermi' (v0.18.3.3-release)
+2024-08-28 12:27:20.373	    ffff95634010	INFO	global	src/daemon/protocol.h:53	Initializing cryptonote protocol...
+2024-08-28 12:27:20.375	    ffff95634010	INFO	global	src/daemon/protocol.h:58	Cryptonote protocol initialized OK
+2024-08-28 12:27:20.376	    ffff95634010	INFO	global	src/daemon/core.h:64	Initializing core...
+2024-08-28 12:27:20.378	    ffff95634010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:523	Loading blockchain from folder ./.localnet/xmr_local/node1/testnet/lmdb ...
+2024-08-28 12:27:20.557	    ffff95634010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:698	Loading checkpoints
+2024-08-28 12:27:20.557	    ffff95634010	INFO	global	src/daemon/core.h:81	Core initialized OK
+2024-08-28 12:27:20.557	    ffff95634010	INFO	global	src/daemon/p2p.h:64	Initializing p2p server...
+2024-08-28 12:27:20.571	    ffff95634010	INFO	global	src/daemon/p2p.h:69	p2p server initialized OK
+2024-08-28 12:27:20.572	    ffff95634010	INFO	global	src/daemon/rpc.h:63	Initializing core RPC server...
+2024-08-28 12:27:20.573	    ffff95634010	INFO	global	contrib/epee/include/net/http_server_impl_base.h:79	Binding on 0.0.0.0 (IPv4):48081
+2024-08-28 12:27:24.016	    ffff95634010	INFO	global	src/daemon/rpc.h:69	core RPC server initialized OK on port: 48081
+2024-08-28 12:27:24.017	    ffff95634010	INFO	global	src/daemon/rpc.h:74	Starting core RPC server...
+2024-08-28 12:27:24.019	[SRV_MAIN]	INFO	global	src/daemon/rpc.h:79	core RPC server started ok
+2024-08-28 12:27:24.020	[SRV_MAIN]	INFO	global	src/daemon/p2p.h:79	Starting p2p net loop...
+2024-08-28 12:27:24.021	[P2P2]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	
+2024-08-28 12:27:24.022	[P2P2]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	**********************************************************************
+2024-08-28 12:27:24.023	[P2P2]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	You are now synchronized with the network. You may now start monero-wallet-cli.
+2024-08-28 12:27:24.025	[P2P2]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	
+2024-08-28 12:27:24.026	[P2P2]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	Use the "help" command to see the list of available commands.
+2024-08-28 12:27:24.032	[P2P2]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	**********************************************************************
+2024-08-28 12:27:25.021	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:27:25.023	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	**********************************************************************
+2024-08-28 12:27:25.024	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	The daemon will start synchronizing with the network. This may take a long time to complete.
+2024-08-28 12:27:25.025	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:27:25.032	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	You can set the level of process detailization through "set_log <level|categories>" command,
+2024-08-28 12:27:25.032	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	where <level> is between 0 (no details) and 4 (very verbose), or custom category based levels (eg, *:WARNING).
+2024-08-28 12:27:25.034	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:27:25.038	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	Use the "help" command to see the list of available commands.
+2024-08-28 12:27:25.041	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	Use "help <command>" to see a command's documentation.
+2024-08-28 12:27:25.048	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	**********************************************************************
+2024-08-28 12:27:25.110	[P2P6]	WARNING	net.dns	src/common/dns_utils.cpp:343	Invalid DNSSEC TXT record signature for updates.moneropulse.org: validation failure <updates.moneropulse.org. TXT IN>: no signatures from 127.0.0.11 for trust anchor . while building chain of trust
+2024-08-28 12:27:55.624	[P2P9]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v2
+2024-08-28 12:27:57.180	[P2P9]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v3
+2024-08-28 12:27:59.712	[P2P3]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v4
+2024-08-28 12:28:00.935	[P2P7]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v5
+2024-08-28 12:28:02.738	[P2P8]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v6
+2024-08-28 12:28:04.261	[P2P3]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v7
+2024-08-28 12:28:05.640	[P2P7]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v8
+2024-08-28 12:28:07.511	[P2P9]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v9
+2024-08-28 12:28:09.116	[P2P7]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v10
+2024-08-28 12:28:17.489	[P2P5]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v11
+2024-08-28 12:28:21.428	[P2P8]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v12
+2024-08-28 12:28:30.401	[P2P3]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v13
+2024-08-28 12:28:30.956	[P2P1]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v14
+2024-08-28 12:28:31.349	[P2P1]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v15
+2024-08-28 12:28:31.705	[P2P1]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v16
+2024-08-28 12:28:40.217	[P2P6]	WARNING	net.dns	src/common/dns_utils.cpp:557	WARNING: no two valid DNS TXT records were received
+2024-08-28 12:32:33.161	    ffffaf8c8010	INFO	logging	contrib/epee/src/mlog.cpp:273	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.ssl:FATAL,net.p2p:FATAL,net.cn:FATAL,daemon.rpc:FATAL,global:INFO,verify:FATAL,serialization:FATAL,daemon.rpc.payment:ERROR,stacktrace:INFO,logging:INFO,msgwriter:INFO
+2024-08-28 12:32:33.161	    ffffaf8c8010	INFO	global	src/daemon/main.cpp:309	Monero 'Fluorine Fermi' (v0.18.3.3-release)
+2024-08-28 12:32:33.161	    ffffaf8c8010	INFO	global	src/daemon/protocol.h:53	Initializing cryptonote protocol...
+2024-08-28 12:32:33.162	    ffffaf8c8010	INFO	global	src/daemon/protocol.h:58	Cryptonote protocol initialized OK
+2024-08-28 12:32:33.162	    ffffaf8c8010	INFO	global	src/daemon/core.h:64	Initializing core...
+2024-08-28 12:32:33.163	    ffffaf8c8010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:523	Loading blockchain from folder ./.localnet/xmr_local/node1/testnet/lmdb ...
+2024-08-28 12:32:33.178	    ffffaf8c8010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:698	Loading checkpoints
+2024-08-28 12:32:33.178	    ffffaf8c8010	INFO	global	src/daemon/core.h:81	Core initialized OK
+2024-08-28 12:32:33.178	    ffffaf8c8010	INFO	global	src/daemon/p2p.h:64	Initializing p2p server...
+2024-08-28 12:32:33.182	    ffffaf8c8010	INFO	global	src/daemon/p2p.h:69	p2p server initialized OK
+2024-08-28 12:32:33.182	    ffffaf8c8010	INFO	global	src/daemon/rpc.h:63	Initializing core RPC server...
+2024-08-28 12:32:33.185	    ffffaf8c8010	INFO	global	contrib/epee/include/net/http_server_impl_base.h:79	Binding on 0.0.0.0 (IPv4):48081
+2024-08-28 12:32:33.191	    ffffaf8c8010	INFO	global	src/daemon/rpc.h:69	core RPC server initialized OK on port: 48081
+2024-08-28 12:32:33.192	    ffffaf8c8010	INFO	global	src/daemon/rpc.h:74	Starting core RPC server...
+2024-08-28 12:32:33.192	[SRV_MAIN]	INFO	global	src/daemon/rpc.h:79	core RPC server started ok
+2024-08-28 12:32:33.193	[SRV_MAIN]	INFO	global	src/daemon/p2p.h:79	Starting p2p net loop...
+2024-08-28 12:32:34.194	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:32:34.195	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	**********************************************************************
+2024-08-28 12:32:34.195	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	The daemon will start synchronizing with the network. This may take a long time to complete.
+2024-08-28 12:32:34.195	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:32:34.195	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	You can set the level of process detailization through "set_log <level|categories>" command,
+2024-08-28 12:32:34.196	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	where <level> is between 0 (no details) and 4 (very verbose), or custom category based levels (eg, *:WARNING).
+2024-08-28 12:32:34.196	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:32:34.197	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	Use the "help" command to see the list of available commands.
+2024-08-28 12:32:34.197	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	Use "help <command>" to see a command's documentation.
+2024-08-28 12:32:34.197	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	**********************************************************************
+2024-08-28 12:32:34.207	[P2P8]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	
+2024-08-28 12:32:34.208	[P2P8]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	**********************************************************************
+2024-08-28 12:32:34.209	[P2P8]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	You are now synchronized with the network. You may now start monero-wallet-cli.
+2024-08-28 12:32:34.210	[P2P8]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	
+2024-08-28 12:32:34.210	[P2P8]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	Use the "help" command to see the list of available commands.
+2024-08-28 12:32:34.211	[P2P8]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	**********************************************************************
+2024-08-28 12:32:34.743	[P2P1]	WARNING	net.dns	src/common/dns_utils.cpp:343	Invalid DNSSEC TXT record signature for updates.moneropulse.org: validation failure <updates.moneropulse.org. TXT IN>: no signatures from 127.0.0.11 for trust anchor . while building chain of trust
+2024-08-28 12:32:54.576	    ffffbee55010	INFO	logging	contrib/epee/src/mlog.cpp:273	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.ssl:FATAL,net.p2p:FATAL,net.cn:FATAL,daemon.rpc:FATAL,global:INFO,verify:FATAL,serialization:FATAL,daemon.rpc.payment:ERROR,stacktrace:INFO,logging:INFO,msgwriter:INFO
+2024-08-28 12:32:54.577	    ffffbee55010	INFO	global	src/daemon/main.cpp:309	Monero 'Fluorine Fermi' (v0.18.3.3-release)
+2024-08-28 12:32:54.577	    ffffbee55010	INFO	global	src/daemon/protocol.h:53	Initializing cryptonote protocol...
+2024-08-28 12:32:54.578	    ffffbee55010	INFO	global	src/daemon/protocol.h:58	Cryptonote protocol initialized OK
+2024-08-28 12:32:54.578	    ffffbee55010	INFO	global	src/daemon/core.h:64	Initializing core...
+2024-08-28 12:32:54.579	    ffffbee55010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:523	Loading blockchain from folder ./.localnet/xmr_local/node1/testnet/lmdb ...
+2024-08-28 12:32:54.585	    ffffbee55010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:698	Loading checkpoints
+2024-08-28 12:32:54.585	    ffffbee55010	INFO	global	src/daemon/core.h:81	Core initialized OK
+2024-08-28 12:32:54.585	    ffffbee55010	INFO	global	src/daemon/p2p.h:64	Initializing p2p server...
+2024-08-28 12:32:54.597	    ffffbee55010	INFO	global	src/daemon/core.h:102	Deinitializing core...
+2024-08-28 12:32:54.599	    ffffbee55010	INFO	global	src/daemon/protocol.h:75	Stopping cryptonote protocol...
+2024-08-28 12:32:54.599	    ffffbee55010	INFO	global	src/daemon/protocol.h:79	Cryptonote protocol stopped successfully
+2024-08-28 12:32:54.599	    ffffbee55010	ERROR	daemon	src/daemon/main.cpp:377	Exception in main! Failed to initialize p2p server.

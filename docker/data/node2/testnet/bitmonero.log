@@ -1,0 +1,321 @@
+2024-08-28 12:27:20.630	    ffffb043a010	INFO	logging	contrib/epee/src/mlog.cpp:273	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.ssl:FATAL,net.p2p:FATAL,net.cn:FATAL,daemon.rpc:FATAL,global:INFO,verify:FATAL,serialization:FATAL,daemon.rpc.payment:ERROR,stacktrace:INFO,logging:INFO,msgwriter:INFO
+2024-08-28 12:27:20.630	    ffffb043a010	INFO	global	src/daemon/main.cpp:309	Monero 'Fluorine Fermi' (v0.18.3.3-release)
+2024-08-28 12:27:20.631	    ffffb043a010	INFO	global	src/daemon/protocol.h:53	Initializing cryptonote protocol...
+2024-08-28 12:27:20.632	    ffffb043a010	INFO	global	src/daemon/protocol.h:58	Cryptonote protocol initialized OK
+2024-08-28 12:27:20.633	    ffffb043a010	INFO	global	src/daemon/core.h:64	Initializing core...
+2024-08-28 12:27:20.634	    ffffb043a010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:523	Loading blockchain from folder ./.localnet/xmr_local/node2/testnet/lmdb ...
+2024-08-28 12:27:20.728	    ffffb043a010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:698	Loading checkpoints
+2024-08-28 12:27:20.728	    ffffb043a010	INFO	global	src/daemon/core.h:81	Core initialized OK
+2024-08-28 12:27:20.728	    ffffb043a010	INFO	global	src/daemon/p2p.h:64	Initializing p2p server...
+2024-08-28 12:27:20.731	    ffffb043a010	INFO	global	src/daemon/p2p.h:69	p2p server initialized OK
+2024-08-28 12:27:20.731	    ffffb043a010	INFO	global	src/daemon/rpc.h:63	Initializing core RPC server...
+2024-08-28 12:27:20.732	    ffffb043a010	INFO	global	contrib/epee/include/net/http_server_impl_base.h:79	Binding on 0.0.0.0 (IPv4):28081
+2024-08-28 12:27:22.806	    ffffb043a010	INFO	global	src/daemon/rpc.h:69	core RPC server initialized OK on port: 28081
+2024-08-28 12:27:22.810	    ffffb043a010	INFO	global	src/daemon/rpc.h:74	Starting core RPC server...
+2024-08-28 12:27:22.810	[SRV_MAIN]	INFO	global	src/daemon/rpc.h:79	core RPC server started ok
+2024-08-28 12:27:22.813	[SRV_MAIN]	INFO	global	src/daemon/p2p.h:79	Starting p2p net loop...
+2024-08-28 12:27:23.815	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:27:23.815	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	**********************************************************************
+2024-08-28 12:27:23.815	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	The daemon will start synchronizing with the network. This may take a long time to complete.
+2024-08-28 12:27:23.815	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:27:23.815	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	You can set the level of process detailization through "set_log <level|categories>" command,
+2024-08-28 12:27:23.815	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	where <level> is between 0 (no details) and 4 (very verbose), or custom category based levels (eg, *:WARNING).
+2024-08-28 12:27:23.815	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:27:23.816	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	Use the "help" command to see the list of available commands.
+2024-08-28 12:27:23.816	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	Use "help <command>" to see a command's documentation.
+2024-08-28 12:27:23.816	[P2P1]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	**********************************************************************
+2024-08-28 12:27:23.911	[P2P1]	WARNING	net.dns	src/common/dns_utils.cpp:343	Invalid DNSSEC TXT record signature for updates.moneropulse.org: validation failure <updates.moneropulse.org. TXT IN>: no signatures from 127.0.0.11 for trust anchor . while building chain of trust
+2024-08-28 12:27:24.033	[P2P9]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	
+2024-08-28 12:27:24.033	[P2P9]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	**********************************************************************
+2024-08-28 12:27:24.034	[P2P9]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	You are now synchronized with the network. You may now start monero-wallet-cli.
+2024-08-28 12:27:24.035	[P2P9]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	
+2024-08-28 12:27:24.038	[P2P9]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	Use the "help" command to see the list of available commands.
+2024-08-28 12:27:24.039	[P2P9]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	**********************************************************************
+2024-08-28 12:27:55.023	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:529	Miner thread was started [0]
+2024-08-28 12:27:55.055	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e5f7b4a371b79dc1c9936a465f18a9ca1d14ac55eda599ca4c6594c79380b501> at height 1 for difficulty: 10
+2024-08-28 12:27:55.098	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f2f0fe33e1f1258b5efce45a8593915322439a020851a346e690fc5c9ebddf81> at height 2 for difficulty: 10
+2024-08-28 12:27:55.165	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f504be95d58570d5a6b5f29888a564b8e7d21829db0cae1f780127142994060e> at height 3 for difficulty: 10
+2024-08-28 12:27:55.213	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e2c7345ab2862ae82b2f4f59effde23dd7faaa7b20dd908b0c4c155b2d2330ee> at height 4 for difficulty: 10
+2024-08-28 12:27:55.357	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <904be889539ff788151ff6ddddbc733436153cf6bd525adf2a24aa3ba3c29c2b> at height 5 for difficulty: 10
+2024-08-28 12:27:55.449	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <9cd012734022c592ffe4e12fde2f594a3928d1e897327c259abc847a9232e0b8> at height 6 for difficulty: 10
+2024-08-28 12:27:55.482	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6c409db0fe0c55576b855a5284faa9ceeabdcff361fb3093b985bad2af738579> at height 7 for difficulty: 10
+2024-08-28 12:27:55.533	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <3d0affb1c5d8e07d9e0c9269729af5ff92e3394946eb2c93636a96891da20baf> at height 8 for difficulty: 10
+2024-08-28 12:27:55.592	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <ea2c4fe996cc54ed761d2ef3459b741f74003b3c166e141f5d33cc0836b4b8d7> at height 9 for difficulty: 10
+2024-08-28 12:27:55.608	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v2
+2024-08-28 12:27:55.741	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <5cae1cc7bd5097a36a236e89a3ae5e7fe51cbdeb9eba9a10c528a083e3639563> at height 10 for difficulty: 10
+2024-08-28 12:27:56.003	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <ceb4e799ccd187a7f86431494f3ced57b38c6860e645832d6e7c5f97a0624c9e> at height 11 for difficulty: 10
+2024-08-28 12:27:56.078	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <50567811a49a644ae5c05d10f242f0c4e30393f99e33ac605e1c1c7c761e3f16> at height 12 for difficulty: 10
+2024-08-28 12:27:56.163	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <7b299cc9a00ae2869fc7a87220d737b35c31e3669413a6c9ebff51b583717d0f> at height 13 for difficulty: 10
+2024-08-28 12:27:56.197	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <ac251165d2531990fc2531a02dc08fc35f3f72cdae8ca6275bca742671608ad0> at height 14 for difficulty: 10
+2024-08-28 12:27:56.235	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <547fd3926a096b1c0814b08737376d97f605e2870bb17796a651131c80d24b83> at height 15 for difficulty: 10
+2024-08-28 12:27:56.659	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <0b0871b36a217f31c5dbc4153d33041b4c805430fe1605d0195fa119a40b98b8> at height 16 for difficulty: 10
+2024-08-28 12:27:56.823	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a3ffe79e981232cf45d536f243c6caaa3d2748e0358327e0f0dc8b5dae2e8f11> at height 17 for difficulty: 10
+2024-08-28 12:27:56.915	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <2c2b31177d74b70a78ca249d5bf80b18886fb6abe970914bc0e6a03316dd815a> at height 18 for difficulty: 10
+2024-08-28 12:27:57.144	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <5c7297e500bfd933b1129125bfb828bb3585fdce602a24556956e8cabe066eed> at height 19 for difficulty: 10
+2024-08-28 12:27:57.161	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v3
+2024-08-28 12:27:57.382	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <d430bb7f3bd25276413683c8fc2ddef32ec9a269563833faa299eeed7d29e129> at height 20 for difficulty: 10
+2024-08-28 12:27:57.592	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <5e72e201573a89c8181e05960050009958e3f25e1c6ae1891edde0b87d7e5800> at height 21 for difficulty: 10
+2024-08-28 12:27:57.658	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <3f9989f13b15e2b727bf9b427e94f0742098f430c9bab5766719649242167e76> at height 22 for difficulty: 10
+2024-08-28 12:27:57.812	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <3e514623e307232edb2ef2a964d3b415ea2fcf6359ff744ce7f721adf127c5e9> at height 23 for difficulty: 10
+2024-08-28 12:27:57.975	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <5979dcdba235da1580892dac9123aa0ebe1d9fc244b5c3c18e60c53125a14c18> at height 24 for difficulty: 10
+2024-08-28 12:27:58.111	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8d1bb08f0a0cd91f84ed598baf2bd7a73588ad3925894a0e6de635b6ceeb371b> at height 25 for difficulty: 10
+2024-08-28 12:27:58.307	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8f1f268dbcb96cee3a754e877f76cff301b5a848c73d127b4382192713536802> at height 26 for difficulty: 10
+2024-08-28 12:27:58.466	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <0aef3438bbf61a0e417701d16386f153ca0e7abb4e68a69e72b72b8251e949c9> at height 27 for difficulty: 10
+2024-08-28 12:27:58.893	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <383f8c1d7a97592c4ad7f0c34e803732a801fc5b106652d3ed1efef3694771d8> at height 28 for difficulty: 10
+2024-08-28 12:27:59.679	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <3098672fec98da4426d1bfeff9176072eefcfe8c8a3177370c40f4f2b0e58fa2> at height 29 for difficulty: 10
+2024-08-28 12:27:59.695	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v4
+2024-08-28 12:27:59.729	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <767c8434a3a2ece82415f054c4576b1d6fe59767bcb40f40530c7c7e577010d3> at height 30 for difficulty: 10
+2024-08-28 12:27:59.785	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <0fd30186a164fc05fdd74f62c171b00376694505a3b501a0bc12c90fc2404bfb> at height 31 for difficulty: 10
+2024-08-28 12:27:59.900	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6a0f041191bf190b1479743cccc264477b189b7fbb535238d9f1e9c7d4ccb816> at height 32 for difficulty: 10
+2024-08-28 12:27:59.985	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <aedeb748fc99b1f6753fcc8e41fb5e579f21eab2c14e1efc12658f37cb917475> at height 33 for difficulty: 10
+2024-08-28 12:28:00.347	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <4962632b8c3c60e1d2f27a794060c476ee513422dc30cdfd21a0a939429d7c67> at height 34 for difficulty: 10
+2024-08-28 12:28:00.405	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <39417cfeb57b497a48e5eb0f9ef7accad31a8d1cadee90b719755cc25b751bfe> at height 35 for difficulty: 10
+2024-08-28 12:28:00.501	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <ef86fe3ce6e82d9298b974f790b48ddb080e9bfd5cacbd5172bb15a9b76bae90> at height 36 for difficulty: 10
+2024-08-28 12:28:00.534	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <902ce13f9dc30af7b142c9b611307230ec1b275032adecae02d00c73fec8b0fd> at height 37 for difficulty: 10
+2024-08-28 12:28:00.821	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f39e781fe0f1f71f370b2a16c4f84578aa7cedcdecc74dc96c077b1856153cb5> at height 38 for difficulty: 10
+2024-08-28 12:28:00.894	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <419520eaa965f18df7999d203a0fa92d5c7af1ece645870a66a7922dd0101d10> at height 39 for difficulty: 10
+2024-08-28 12:28:00.915	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v5
+2024-08-28 12:28:01.008	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <0a31afaf42d78acc61e84136bc40d7343aa75d22a91e68484bf0e536bd422174> at height 40 for difficulty: 10
+2024-08-28 12:28:01.178	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <558e846b537bb5569ad994d4f1fecc3cfd4fbe53aafa698619375aa196654b6f> at height 41 for difficulty: 10
+2024-08-28 12:28:01.349	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <c2e61fd7cbe34432d3fa79eaa330ec780bed7bab7467868260d995aa015950d7> at height 42 for difficulty: 10
+2024-08-28 12:28:01.650	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <4e434bd5be394f7ebcdf080c6566adf48237b1f2a32732e357974b247a3ebf71> at height 43 for difficulty: 10
+2024-08-28 12:28:02.034	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <3ab3afcf67aef7da15fb6112a0bc539a5b587835027847576658041eb68f5340> at height 44 for difficulty: 10
+2024-08-28 12:28:02.185	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <38069fe7381e32ce019d8435963aebc64757a59c0b852a9e996aa102a2852ef6> at height 45 for difficulty: 10
+2024-08-28 12:28:02.282	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <b53faa262f91874fcbe5fa75fc33349c89027e69e24872c11b1cdbeb0a086a27> at height 46 for difficulty: 10
+2024-08-28 12:28:02.417	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a29bc54636e7dacb77e6f3b8328bb334d9cd4e34e1ef9145eede0b1757cb9dfc> at height 47 for difficulty: 10
+2024-08-28 12:28:02.483	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <becf4db7dc8d7aa357eda1d9b6560d5373e51246737a5a6f2254e84ebbe730ca> at height 48 for difficulty: 10
+2024-08-28 12:28:02.705	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e3a96336b60c0d988fab1cd8641f5e19a156ed73f2775ff0a16c590a8e8b3858> at height 49 for difficulty: 10
+2024-08-28 12:28:02.722	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v6
+2024-08-28 12:28:03.108	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e7d3cdf5c0c19e95fc811a0e480494d5800ae0d87776942cf58dc07c58491b1e> at height 50 for difficulty: 10
+2024-08-28 12:28:03.301	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <b90dd0011228cd68d634042c90240c20688d4594711de0a18d6fae1931f2fdb4> at height 51 for difficulty: 10
+2024-08-28 12:28:03.332	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e058c0f23ba4d722ecb8c55b1a35ebff9bcfd4d9786463657cd68bbbc89f7abf> at height 52 for difficulty: 10
+2024-08-28 12:28:03.365	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <d8c382d0be5a8f24a86da319ac95d7bcb7f809cba17ca52d4a8128429e9d1681> at height 53 for difficulty: 10
+2024-08-28 12:28:03.469	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <c1bf2c385cbb6522823231d7ad8ae84b4eaa465b261432331a092c0cba5818bf> at height 54 for difficulty: 10
+2024-08-28 12:28:03.611	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <1666c30bb975cd30502ee33f5e5fdb605c7aefedcb4f00ac7eaaa45afffaf38f> at height 55 for difficulty: 10
+2024-08-28 12:28:03.888	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <4c1ea13e004c7f6f658a8f324e06f302a27ac1e2325042d45011e95bcce1dbad> at height 56 for difficulty: 10
+2024-08-28 12:28:04.069	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <c1f02b49a1aeb94e2d02e51a519c57689cf1f9d0eb9debad0c88dd8afae121d4> at height 57 for difficulty: 10
+2024-08-28 12:28:04.173	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <0791dbc10f2727631c028ecfab8fefaaabd206a3a39e97cc7dfcdf3799b22f77> at height 58 for difficulty: 10
+2024-08-28 12:28:04.225	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <aa75bd1ae006440823e55722e04d2f862c8c261018b1ff5f69de8db75ffa1209> at height 59 for difficulty: 10
+2024-08-28 12:28:04.242	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v7
+2024-08-28 12:28:04.400	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <4ed256f06d48782e78f37f1021cc050463d0839e4166733bd9dae0711f27ce3f> at height 60 for difficulty: 10
+2024-08-28 12:28:04.526	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <d89f1939eba51dd3635550ae0f4570055ebdd3afbfaec1bbe777bbd98af6ffb1> at height 61 for difficulty: 10
+2024-08-28 12:28:04.694	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <ce88bffa51e08fb4ce4eef60559b2629bec816e19e2a8219c0d2233946035221> at height 62 for difficulty: 10
+2024-08-28 12:28:04.745	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <98a4ab29e0d3a7ec6a4c453c6f32778f0ae26f9e75c5d918645842f673186964> at height 63 for difficulty: 10
+2024-08-28 12:28:04.824	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <02603ae9c5ef8376f1984291ff5fa957abdc9049d51e219d275df5bacbdcf630> at height 64 for difficulty: 10
+2024-08-28 12:28:04.895	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6515baa32dcf3833091fed43e86ac312fa88aa1d55ebe9b46b5f00830f4d6017> at height 65 for difficulty: 10
+2024-08-28 12:28:04.978	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <d02371cf8c3f0789e5acba24dbf36bcf8efeef5e9858db57bca9f6c039444a37> at height 66 for difficulty: 10
+2024-08-28 12:28:05.521	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <1e4fc3a12e4ee71f83cc4548e87a825e1b8931de712c10efec7a68e4f234cfad> at height 67 for difficulty: 10
+2024-08-28 12:28:05.557	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8924bc8b32187f92cdec4883b5834db1df8d1c8bf3f8977c6223e9cd2453546a> at height 68 for difficulty: 10
+2024-08-28 12:28:05.605	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6c99efc46f330f36f9bded1ffba91bd1d607535896fb8e22c83cce1606c45823> at height 69 for difficulty: 10
+2024-08-28 12:28:05.621	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v8
+2024-08-28 12:28:05.754	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <885beabdb9301997055668e3e589202259bac513dbc4df7e0d397616c4292dda> at height 70 for difficulty: 10
+2024-08-28 12:28:05.801	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <011f3d9cf8755ba642cb5c2494863e14d74b0e4ef8d66c424d124fcb075ac826> at height 71 for difficulty: 10
+2024-08-28 12:28:06.340	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8f1bb0213d635b60bbd15afcbf74da44fad30ba818fbf83f42dfae71ec21f670> at height 72 for difficulty: 10
+2024-08-28 12:28:06.577	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <5abca437b218f1b0639e71f2eb41a3be1a5c9903766b2997d9b92b2763c48d7b> at height 73 for difficulty: 10
+2024-08-28 12:28:06.622	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <ca794b07da9deaeb6042bafd966161c5c41102609cda472f23a1f562984cfe7f> at height 74 for difficulty: 10
+2024-08-28 12:28:06.764	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <b0b581fd0a89d4d998a04ba94e72d7c6223efc35db419ed52516882ed2736a45> at height 75 for difficulty: 10
+2024-08-28 12:28:06.828	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f4f2f1f744540de7d65623836ad594995833785e240b01713ae5f676f268e7a6> at height 76 for difficulty: 10
+2024-08-28 12:28:07.386	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <935e2815994f5eacc805c17452fccc6d698511fc944287d2063098bbd207ce5f> at height 77 for difficulty: 10
+2024-08-28 12:28:07.426	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e7a75e0d3ea6ba4a1be42a4cbe938c3f6745109d21fc3470bc6eab604f95beeb> at height 78 for difficulty: 10
+2024-08-28 12:28:07.468	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <b74d27c34190694774894fd31940186c74932f9770b720d0f443cdc347b0a40b> at height 79 for difficulty: 10
+2024-08-28 12:28:07.487	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v9
+2024-08-28 12:28:07.711	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f6a3cda4191a00e3822a3d7166c1d0bc8f08326ab6efb121737492cc4da4f4cc> at height 80 for difficulty: 10
+2024-08-28 12:28:07.959	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <65dead6ed0df4bfab0f6cbcdb441251e11326be17f2551398f476f0fcc276774> at height 81 for difficulty: 10
+2024-08-28 12:28:08.132	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <57a3b59415c6c0490c1aa6cc00537c514bc3af7844d9abd260b88e599037946f> at height 82 for difficulty: 10
+2024-08-28 12:28:08.182	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a137eeedbfe8a9f3b5bf9588307d28a83958916cfed801f5576082961effbf74> at height 83 for difficulty: 10
+2024-08-28 12:28:08.471	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <d604c7f513b5854a11377da35acc2f1d993857d00129b550191a184de55e1e67> at height 84 for difficulty: 10
+2024-08-28 12:28:08.656	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e1517cd989d5cf2742190c95beb9c1caf4c81d84aadb65f241e457a0991addd1> at height 85 for difficulty: 10
+2024-08-28 12:28:08.700	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <dc67fe70a30f0b56c0f2bb283f32e06edff979f220e470a7c9977c2344c840da> at height 86 for difficulty: 10
+2024-08-28 12:28:08.792	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <c53fa888841bb88470bc30c254aacca18c3a956c5102c603d2e24dfaa0992e79> at height 87 for difficulty: 10
+2024-08-28 12:28:09.000	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <04f5bcb3b64c1979e8e46f8f1367b7020af562df085b7e9514c9dc66ad4ac152> at height 88 for difficulty: 10
+2024-08-28 12:28:09.070	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e3df4497d69ca8b861e8d6c5e68c91e4d2de332aa023d8012005deb27d3397ca> at height 89 for difficulty: 10
+2024-08-28 12:28:09.092	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v10
+2024-08-28 12:28:09.717	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <07ea25ed59cabffcca7d54f1a725c416283d27b1494fe654c38de7c326698d88> at height 90 for difficulty: 10
+2024-08-28 12:28:10.720	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <36636c7ee9e63dbcd7c02e7ecc519d992253e3d962104e6ab87a5ddd09201ae6> at height 91 for difficulty: 10
+2024-08-28 12:28:10.817	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <b463e1a2998bb31b3795b6052a9c495cf2c4b65ebb449893045fd2853938665d> at height 92 for difficulty: 10
+2024-08-28 12:28:11.166	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <277d4787c5490beedff4c9a1d2728086c69656a8b24fd8fff966ef6c08577c27> at height 93 for difficulty: 10
+2024-08-28 12:28:11.701	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a2447d7b11981489e27984da71ad657f4225e78c6401d982b2a902717bef8aea> at height 94 for difficulty: 10
+2024-08-28 12:28:12.691	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <33a33f91fac96eb24d116be5ebbd482136181cb23fad77d1d56e3c1b6baff98f> at height 95 for difficulty: 10
+2024-08-28 12:28:13.995	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <958d846ce6a2434f1764d918f763f23f0734541a11cd47ec5db8614b9d920baf> at height 96 for difficulty: 10
+2024-08-28 12:28:14.325	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <cd584c54eb0ef7a745fc6be891023c0961ebe4fefe979c89fefd33d8c0a89403> at height 97 for difficulty: 10
+2024-08-28 12:28:16.323	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <13aadedb3373ea4a7783db4b374c4454fcc055c4816af2f3ccd81d65db8a9994> at height 98 for difficulty: 10
+2024-08-28 12:28:17.393	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <dfeac3721c3758f47f28d0ce30bf98f14255aefa0734a6f268ea910aaf935a5d> at height 99 for difficulty: 10
+2024-08-28 12:28:17.439	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v11
+2024-08-28 12:28:18.274	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <de6dea0e23aff3d3c7add310d5f2793987aa5642be6c10736f0babbbc0f38333> at height 100 for difficulty: 10
+2024-08-28 12:28:18.585	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <27fe2d734effd766807478d4ce08229d5e76fd4501f958738d39605a09b32b3f> at height 101 for difficulty: 10
+2024-08-28 12:28:18.688	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <45ad70063663273143d94969c939bd39a8a64f310406d46d0510d0c87bdc7f91> at height 102 for difficulty: 10
+2024-08-28 12:28:18.949	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <5083ea4b7d0e0364c9e3cf4593b3e7de2f2aae32b58788261b2d7ab977cc37b1> at height 103 for difficulty: 10
+2024-08-28 12:28:19.334	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e0b94e47635ecbbd5473d421515110e60e2d2d9150d2c5986ed3f6e84782c289> at height 104 for difficulty: 10
+2024-08-28 12:28:19.422	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <7cfb63d0f6e180085ea752aeff8dcdbd5f7904e3c906fc9cb3ae490e2402364a> at height 105 for difficulty: 10
+2024-08-28 12:28:19.607	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <d3759c26538e8ec0bb3510f721081ad405e57d4e422857f69c9b0bb560ffdef6> at height 106 for difficulty: 10
+2024-08-28 12:28:21.046	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a678b88e3bf752a2e41354936a4beb932cbfe43a7f4bbee6a2c5a27f38207812> at height 107 for difficulty: 10
+2024-08-28 12:28:21.154	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <95374c6c69111bbe4df693e63738a28ff8f19da9a6071d67b078ae630fb2169b> at height 108 for difficulty: 10
+2024-08-28 12:28:21.306	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <df4f215636693cf64cefcaaf6e6182fbc00c73e93d366ceffb57612ee41ac27a> at height 109 for difficulty: 10
+2024-08-28 12:28:21.353	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v12
+2024-08-28 12:28:29.833	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f98e2bc72daaace7294400e3f6d6071beabbb016b4fe2a0847f1a9e5cba1406e> at height 110 for difficulty: 10
+2024-08-28 12:28:29.853	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <95dae7198cf4ecc620a539ac6875e50dcbbe96d1633f2c3375611a8374f48d34> at height 111 for difficulty: 10
+2024-08-28 12:28:29.864	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <3a742a551152088edfa9d6cec00c89ba68fcf13eaf363ae87b98614ae04947bf> at height 112 for difficulty: 10
+2024-08-28 12:28:29.964	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8d3fb8e4fdcf30679dffffe9acfd4588add9b6d286a29f3db5cb9ee2a84e5f84> at height 113 for difficulty: 10
+2024-08-28 12:28:29.984	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6ebb38fd0aafdcb8fddb8f49280aa2a2f1ce873141c2aaa0e9876dd660897eeb> at height 114 for difficulty: 10
+2024-08-28 12:28:30.046	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <ca73e0c357f06a502436cf38ee1da695dd10f2d03c5af972779ff129e5c1cdcc> at height 115 for difficulty: 10
+2024-08-28 12:28:30.158	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <16f600bcea2016f1768593f3d2c98d382e0315837daa23f61da7d647876f9d75> at height 116 for difficulty: 10
+2024-08-28 12:28:30.196	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a50b032f49c437382935253eca550ff3e9ae704dbf4325468b686bd63db53cf3> at height 117 for difficulty: 10
+2024-08-28 12:28:30.228	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <06a1bdc4d788feb01a2e4eb1fd9f7516c12738504e855e42a9b6ef461425b1ff> at height 118 for difficulty: 10
+2024-08-28 12:28:30.363	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6151d67e2363b7620792ad290ad6c117b5d6b56c87c66dec2f94ecce6c730843> at height 119 for difficulty: 10
+2024-08-28 12:28:30.367	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v13
+2024-08-28 12:28:30.430	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6c97b1cd52749a50269ca715f45d4bfcaba8ae35734ce8370394c1d9293a411e> at height 120 for difficulty: 10
+2024-08-28 12:28:30.469	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e2c48060105d4726903d9a2f445a2f97171c892b4edda1ea47f3ddd5e136f8ff> at height 121 for difficulty: 10
+2024-08-28 12:28:30.484	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <213df5fbe59540faffaf97647954deba27fc2985fa73baf4bce9492e1cb11f66> at height 122 for difficulty: 10
+2024-08-28 12:28:30.625	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <2ea008d0920c81373100e0f6ddea13c5d655a0d2ac66293c5a34075f93ea5a24> at height 123 for difficulty: 10
+2024-08-28 12:28:30.653	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <437967547b270d23f7fdf267e73528cca1444148f0d0896280e25708dd9a4c54> at height 124 for difficulty: 10
+2024-08-28 12:28:30.712	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <9e2c3f240a97f6af2cd125d036911900b559bc3c0bfd28cd2d54bd1964683c1f> at height 125 for difficulty: 10
+2024-08-28 12:28:30.751	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <5e33c32d8bf1ac13800e046c6a00ea09be572782ffa19c0221a0b89610645135> at height 126 for difficulty: 10
+2024-08-28 12:28:30.784	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <35ec55ba66dae5e14ac7048c70cae1577cf40939a022bb3a9008c0ef41316570> at height 127 for difficulty: 10
+2024-08-28 12:28:30.838	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <9ee55a22571d7e9e2c0fc7168ef998e52b6c608935f691925c90a878568c2fb6> at height 128 for difficulty: 10
+2024-08-28 12:28:30.915	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a9001dcf1ee08fe37359826f474c2a50cf76b9ba5c1678c2f9493b10e202e529> at height 129 for difficulty: 10
+2024-08-28 12:28:30.919	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v14
+2024-08-28 12:28:30.958	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <21660de98b081f3732427c2c0dff944e8e2d183ec21e2b1d404be402cf074e17> at height 130 for difficulty: 10
+2024-08-28 12:28:31.016	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a4c3b370cb838e6b067971a980cd09c43ab71f414c1a08018d1f0370254b1830> at height 131 for difficulty: 10
+2024-08-28 12:28:31.029	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <70aacf48774664eedb4a2d9e5a1012f74687cf996b9186208361b76a3fd13ad3> at height 132 for difficulty: 10
+2024-08-28 12:28:31.039	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <7d828e0bf01a2d65f569567acba025b5893b3ec7e11c93bbdc24699267c06583> at height 133 for difficulty: 10
+2024-08-28 12:28:31.077	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <4ff3d805f1d74c052036583ab4b501f361bee57f9e12724e037c36d3a77498fe> at height 134 for difficulty: 10
+2024-08-28 12:28:31.090	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <55bb83a22ca4e184ec8393ea3974af7ceee851cf626a43f1e0e642c05990ccab> at height 135 for difficulty: 10
+2024-08-28 12:28:31.115	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <4854d5c0e220c99ea0dad8107f47c37a0b66d5334b37775b5ebcc062200d1430> at height 136 for difficulty: 10
+2024-08-28 12:28:31.136	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <1b34620d1217bd0de5676aac25311eb85649217a370032e5eb13e329aa26bf42> at height 137 for difficulty: 10
+2024-08-28 12:28:31.177	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f737a9c06962c77209370408358966c2264b22b33cad4de1803defb6f4425592> at height 138 for difficulty: 10
+2024-08-28 12:28:31.206	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <2977345041bba54c2b2229a7a9fa6816904ea0fad6bd3312dbec13cb55ddbdab> at height 139 for difficulty: 10
+2024-08-28 12:28:31.214	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v15
+2024-08-28 12:28:31.257	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <c4f8a7af17ae46960443fa53dd468ff2864550f6d519434ce4f1c062aab9eccb> at height 140 for difficulty: 10
+2024-08-28 12:28:31.272	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6bd4938036f9b039e8df3f8e3a8fe46c834cfc3d18b991f78d510781ec51930b> at height 141 for difficulty: 10
+2024-08-28 12:28:31.282	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <0a19c38cfed9cfdf0b402a53b13f935efc0342991e999130ed78eb9de29294dd> at height 142 for difficulty: 10
+2024-08-28 12:28:31.450	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <98cfa754c38b8bdec9b14179cdf952aaf1510638ab8373a9d6598c3cad3d9df8> at height 143 for difficulty: 10
+2024-08-28 12:28:31.485	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <1503e5af44949b30d2ddc676a261351b62dec454cac259bc2c7ff47774660053> at height 144 for difficulty: 10
+2024-08-28 12:28:31.505	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <3040c93ded4c31084b97eea92fb4564bcb5949c958ce71cdcc18714ae1323dc3> at height 145 for difficulty: 10
+2024-08-28 12:28:31.527	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <2b9efd4f53a87af1f921fdea2ec059f05d1e4ce6fba34e69d4eb373d154a0adb> at height 146 for difficulty: 10
+2024-08-28 12:28:31.559	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a7832ab7264a0c358fa8f1f8449ae348017710b6c089afea2cdd802a28255dd6> at height 147 for difficulty: 10
+2024-08-28 12:28:31.593	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a59ccbe6131e892d111bafefec003cfcd4719e5ae5bcf60bf365bbc01ded9c8f> at height 148 for difficulty: 10
+2024-08-28 12:28:31.647	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <deb3583d620e110b1e24c470d02a9a42e45670ce7ca10530ed5e2f48162871f6> at height 149 for difficulty: 10
+2024-08-28 12:28:31.651	[miner 0]	INFO	global	src/cryptonote_core/blockchain.cpp:4525	Validating txpool for v16
+2024-08-28 12:28:31.676	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <698a01e9a382cc23907631ade3cc6e8a936a75284d658c5fd605a74af3441806> at height 150 for difficulty: 10
+2024-08-28 12:28:31.686	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <2c3435c246d20b1aba3241e4d95a5452ef09688d77883c8c3ca636fde9341174> at height 151 for difficulty: 10
+2024-08-28 12:28:31.774	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <47422cbe4c67cc39e9fa65cb9c3bf049b0f4d00d90721cad1de32b442f2fb5ea> at height 152 for difficulty: 10
+2024-08-28 12:28:31.812	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <ff2b0a19fcd3f2d82a6f2ebacfa902af1e02fc573946aea4b44eb6f2679cd7ea> at height 153 for difficulty: 10
+2024-08-28 12:28:31.993	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <001a8773a03a60b4e88f4aa31eb4fd39e61f1fb1aa8924cdffff68f5cd1ff846> at height 154 for difficulty: 10
+2024-08-28 12:28:32.025	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <803f0890df78e416dc07553913904d306484ee375f355e61d73904c9de933dba> at height 155 for difficulty: 10
+2024-08-28 12:28:32.118	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <efefecb65af02ee32e05d4b2d7c5175f14f350fea7a9240817197cb0fe1c249b> at height 156 for difficulty: 10
+2024-08-28 12:28:32.141	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <3b40f2433a0565889e2aa0a89aa052dbdbe196fef94706328512da1163f182c5> at height 157 for difficulty: 10
+2024-08-28 12:28:32.172	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a362abe1ba9534d110c27958d17da3c019dc4e134bbf339b3c2b8f59f8b3c0cf> at height 158 for difficulty: 10
+2024-08-28 12:28:32.223	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e75d62bbce654c80e56482bca5b8f14d87d591ea507bf21d698a5f65b3e2d2e0> at height 159 for difficulty: 10
+2024-08-28 12:28:32.262	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <c0ab25f62efd3b6b2c1a464edcc03502161a0a3ac5b41623fdcadd4f3969a5b7> at height 160 for difficulty: 10
+2024-08-28 12:28:32.318	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <cb3bd3091ca44e516bc6df1ffe6c1fc2f06ba95bf31db857e1cc9620cde7f7d6> at height 161 for difficulty: 10
+2024-08-28 12:28:32.351	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <05ece294f4271a12340dc2c478dee108866bb3d65713feae5245b82a5a59e169> at height 162 for difficulty: 10
+2024-08-28 12:28:32.361	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <54f892e530f3c15ec7f027ba8a615a59289012efe846451febab4563204c6fae> at height 163 for difficulty: 10
+2024-08-28 12:28:32.461	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6b3f6abd1f2e464fa3969a523ce04930fee214a788161a3cace9b92a0ce6be8c> at height 164 for difficulty: 10
+2024-08-28 12:28:32.474	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <0ca6d53f40bb3e40efc349c4d55f49d68c174de1661d6f6634ff5313fb73aaa6> at height 165 for difficulty: 10
+2024-08-28 12:28:32.535	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <ed26070532d898a1ce5edf842e06b737d6c40be4769b231a813f02e539fd55c3> at height 166 for difficulty: 10
+2024-08-28 12:28:32.591	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f6fe8e6789c89d0721c48e63ce711ac6f93ac59c2fb8c7ab2e0cd63087268f31> at height 167 for difficulty: 10
+2024-08-28 12:28:32.635	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <047f4ee84bab7683abdca3b6eadcbf485c75e9c2cfdf93078e179ccae7a03e9a> at height 168 for difficulty: 10
+2024-08-28 12:28:32.728	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <74807b1b3c1370609a14a16064e949f16fa03580228383bbc9f2ffd5a5f9d3f1> at height 169 for difficulty: 10
+2024-08-28 12:28:32.763	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <c9f42887a590d16e1cbfe22b6c89201728f364151a65c1606e2d6db181140d94> at height 170 for difficulty: 10
+2024-08-28 12:28:32.808	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <322c1229443257db4a960e9615af6dd683b82a2cfb0e9a36500c5cd9b03ffb71> at height 171 for difficulty: 10
+2024-08-28 12:28:32.844	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <015138e8fdb2c026b81dbbfbfaf15dbb6420d9f4648e873be6bae59e54d466fe> at height 172 for difficulty: 10
+2024-08-28 12:28:32.909	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <9e88a179d6faa1467d3b024c1bf35dcd4a407fbdbbcc3c029f4103d4d39ade9b> at height 173 for difficulty: 10
+2024-08-28 12:28:32.945	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8d823f13fd4369bd2fb38e39226723e215faa5a941aa5fbb00434c9e2890f17d> at height 174 for difficulty: 10
+2024-08-28 12:28:32.958	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <c2b81e7e72365fcfb3bea80101487166b9e44b991b620b986f02ff13b3f058ae> at height 175 for difficulty: 10
+2024-08-28 12:28:32.979	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <52d6b115c80542f9226e0f82908d2d5e45312ba1105fe17dc88006a11256e997> at height 176 for difficulty: 10
+2024-08-28 12:28:32.990	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <2b1b55a16cc724618d7f08ae12971ede846e58494adaac69ac0b164c9741d34f> at height 177 for difficulty: 10
+2024-08-28 12:28:33.033	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <df580d162edbf7232e08bc80f69e5a6342bfdfe40d6b7fa98549b0ae89aa99a2> at height 178 for difficulty: 10
+2024-08-28 12:28:33.073	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <d8d963370e4c74ee09f23cf593596666c73e05f7c6a84c7059f4215e982e74bb> at height 179 for difficulty: 10
+2024-08-28 12:28:33.109	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <4095ce00bf2cf06e5430d3eb8ea91763a73f32f44e0c398c4123db75ceab7a60> at height 180 for difficulty: 10
+2024-08-28 12:28:33.140	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f1bf335b1d286050e342ffef2a14eef07ec11be08b9c4b9dbbfb25635b669a24> at height 181 for difficulty: 10
+2024-08-28 12:28:33.187	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <da55e2e49b0480e1521447b263b35dac793016dcf393b4b2fe747205f752016c> at height 182 for difficulty: 10
+2024-08-28 12:28:33.354	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8a4da96e1f2a62d77739340ad87691a525c2528b2dd8011f95502f3586f9bd32> at height 183 for difficulty: 10
+2024-08-28 12:28:33.380	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <c869afac2e7b0dc7bfe18da81dc66c8c8396eb6d0bada4e5dac168ca5f9cad61> at height 184 for difficulty: 10
+2024-08-28 12:28:33.439	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <587db4a9e926e4df0a5e429b60698d312c6cd941fd5553b601cc3719d7b89e3c> at height 185 for difficulty: 10
+2024-08-28 12:28:33.457	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <a4b0d750039bc4b562bb4e4c0d276a427a58b11752f757ff50f3323fe5e1b502> at height 186 for difficulty: 10
+2024-08-28 12:28:33.470	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8dbf283b36eafa1f489a80c26bfb6c2388a2a3a02ea1afa5357a718c78ed4252> at height 187 for difficulty: 10
+2024-08-28 12:28:33.528	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <7fd842197a51bbee5afd8406c3f3a8ed7259af1a071ef1eafbad889ebac65e19> at height 188 for difficulty: 10
+2024-08-28 12:28:33.564	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <5cc60d2f3b73cdcd905270e1740d1676f1e5c371cefa14ea8549003a06b8d721> at height 189 for difficulty: 10
+2024-08-28 12:28:33.591	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <15651e8f78e2dc71c4cf1991cfec62c2a1a6a2c34c2be7f758940dcd821549db> at height 190 for difficulty: 10
+2024-08-28 12:28:33.612	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8f3aa7d67e5032122da9218f9e012e386025e780cd0ef51654feb851ac9df79f> at height 191 for difficulty: 10
+2024-08-28 12:28:33.652	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <b28f3e5a9e75879b4cfddd751158f5cbac8f37a6ca5ac48e1120ee8508737997> at height 192 for difficulty: 10
+2024-08-28 12:28:33.699	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <fd585fba4922cbb4102974f167c4f356642ce35516637b5e70de44b9d828d294> at height 193 for difficulty: 10
+2024-08-28 12:28:33.785	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <764935e798b9e517535ba3f04358c0d751cbe9672f601d3ad7e9b335e3dc0a2f> at height 194 for difficulty: 10
+2024-08-28 12:28:33.802	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e783d816275178af895b685ee727061c8b68d3537ce07d4cac8f00ab64eab61f> at height 195 for difficulty: 10
+2024-08-28 12:28:33.815	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <3b794568c3713af90a09f8b79daeae005f25790ffd868774dd7e01bd4aa5eeb1> at height 196 for difficulty: 10
+2024-08-28 12:28:33.991	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <bbf7da62ed7401cb0d8d90b416b28a139614455feb8e763bbf7912f8b8c8e150> at height 197 for difficulty: 10
+2024-08-28 12:28:34.046	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <7270d928f8ffae00507eb66980d0abc964c404a405da30fc20a736bb1ce48f99> at height 198 for difficulty: 10
+2024-08-28 12:28:34.073	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <90d7183c12c29669b6d741317593ff386364d6dbdab7de30f3b7e1a346f9336f> at height 199 for difficulty: 10
+2024-08-28 12:28:34.083	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <bc7eb7de45b47ae2d4929712f75bbce73ce8e9b03f60e9dfd454f3e25e22a72d> at height 200 for difficulty: 10
+2024-08-28 12:28:34.093	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <becda5f0727162166a368cf5a112ccaffa265ab84a7f97d2068376175bcf4fac> at height 201 for difficulty: 10
+2024-08-28 12:28:34.239	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <1e03e87cb755887348f83d0df5dc4e68b5cc712348ab15be6da584ebb61dbf3e> at height 202 for difficulty: 10
+2024-08-28 12:28:34.249	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <76c80dab84ea3f73318063bb4907c5e904d5f56b867e79f0a9b2b1421686e5fd> at height 203 for difficulty: 10
+2024-08-28 12:28:34.262	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <4a791f7832aa9cfee4bbf36c90c02f0586d1ad42b388655498ce2feeee32fba2> at height 204 for difficulty: 10
+2024-08-28 12:28:34.271	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <08b12ee1c6fae3c325dfc730ab7e69d0232e23b97ab2f81b9c427530e4ebad82> at height 205 for difficulty: 10
+2024-08-28 12:28:34.325	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <eef1550b7159ed83fe286b431f6052cb4fedc895280cb38960ab022f49d97a36> at height 206 for difficulty: 10
+2024-08-28 12:28:34.429	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8695fbe90198ab075613c5f3144ba08dc7629d292544c98ab0d39563f7d7ab3e> at height 207 for difficulty: 10
+2024-08-28 12:28:34.454	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f422ff6b48aa1227347a5a6e28697fe234ed33ce76b5aa15af42c462c1c724fd> at height 208 for difficulty: 10
+2024-08-28 12:28:34.467	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <d6f8eca8ca541052d1cc8406931c19c8d26ddcebd5063c03246e3323ed07f25a> at height 209 for difficulty: 10
+2024-08-28 12:28:34.520	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <f3f518535d386ce27815cfb308fa225217a0971373beff9a9aa0ca444b74019a> at height 210 for difficulty: 10
+2024-08-28 12:28:34.530	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6d1b33f5ee83150e376b43ba16fecd8e5c4bfa6de1fe50ac824aab85afba7833> at height 211 for difficulty: 10
+2024-08-28 12:28:34.680	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e0b22c35f30478098dd457e33088d888d459d46060c164b4a71c904b9d06cf67> at height 212 for difficulty: 10
+2024-08-28 12:28:34.734	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <29266f3cf8763988fb0e995242a795bafea119454146654f372c813c355ba70a> at height 213 for difficulty: 10
+2024-08-28 12:28:34.772	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <aa76938aa78a034c8dd894c599a73e7cb7c8a1ebcd53199cfd9899918245d4a4> at height 214 for difficulty: 10
+2024-08-28 12:28:34.817	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <6e0acb46466110f565e61091c2d43cf76411cc53b99aebad9809df23697c8ac0> at height 215 for difficulty: 10
+2024-08-28 12:28:34.827	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <735367ebd82d69d7ca24eb503693aed9b0b73c829170a9ffe49420f8bf1aea62> at height 216 for difficulty: 10
+2024-08-28 12:28:34.886	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <cff4db33d5b14586d67595272d1c7b9bfbb941de88a2a65c556374253ca3f56d> at height 217 for difficulty: 10
+2024-08-28 12:28:34.929	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <46d50aad1ce9df030e2cfed475c0c49c4dbaea8752351f2599884170847ab2a6> at height 218 for difficulty: 10
+2024-08-28 12:28:34.945	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <e08eb4398b3cb140bf86c9ac89a0342ccde82c6a76d41b41a43327b4dbb16508> at height 219 for difficulty: 10
+2024-08-28 12:28:34.963	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <fd68fa3dce1b01eb16564ed4f222de08eea7ae73ac35e3650267b936c2fb9a4e> at height 220 for difficulty: 10
+2024-08-28 12:28:34.977	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <8894855c1defaf794346936b48cfd076b3f2c36ad78fd73f14a276542f6f0ae5> at height 221 for difficulty: 10
+2024-08-28 12:28:35.007	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <97e6fb23f77cdb9ab6efd68a34fd56ac8d35b83178aee6b1990867277b6ac18e> at height 222 for difficulty: 10
+2024-08-28 12:28:35.043	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <02e21f9f41287b47c765b0e1f86826e3c371df4186e85a450b2e7428871a94d7> at height 223 for difficulty: 10
+2024-08-28 12:28:35.054	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:591	Found block <5d2159f2a3011fd06a4fe7086a2514b50cd9211faa1afdb21885b034b58147a4> at height 224 for difficulty: 10
+2024-08-28 12:28:35.106	[miner 0]	INFO	global	src/cryptonote_basic/miner.cpp:608	Miner thread stopped [0]
+2024-08-28 12:28:39.016	[P2P1]	WARNING	net.dns	src/common/dns_utils.cpp:557	WARNING: no two valid DNS TXT records were received
+2024-08-28 12:32:33.402	    ffffadc28010	INFO	logging	contrib/epee/src/mlog.cpp:273	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.ssl:FATAL,net.p2p:FATAL,net.cn:FATAL,daemon.rpc:FATAL,global:INFO,verify:FATAL,serialization:FATAL,daemon.rpc.payment:ERROR,stacktrace:INFO,logging:INFO,msgwriter:INFO
+2024-08-28 12:32:33.402	    ffffadc28010	INFO	global	src/daemon/main.cpp:309	Monero 'Fluorine Fermi' (v0.18.3.3-release)
+2024-08-28 12:32:33.402	    ffffadc28010	INFO	global	src/daemon/protocol.h:53	Initializing cryptonote protocol...
+2024-08-28 12:32:33.404	    ffffadc28010	INFO	global	src/daemon/protocol.h:58	Cryptonote protocol initialized OK
+2024-08-28 12:32:33.405	    ffffadc28010	INFO	global	src/daemon/core.h:64	Initializing core...
+2024-08-28 12:32:33.406	    ffffadc28010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:523	Loading blockchain from folder ./.localnet/xmr_local/node2/testnet/lmdb ...
+2024-08-28 12:32:33.419	    ffffadc28010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:698	Loading checkpoints
+2024-08-28 12:32:33.420	    ffffadc28010	INFO	global	src/daemon/core.h:81	Core initialized OK
+2024-08-28 12:32:33.420	    ffffadc28010	INFO	global	src/daemon/p2p.h:64	Initializing p2p server...
+2024-08-28 12:32:33.423	    ffffadc28010	INFO	global	src/daemon/p2p.h:69	p2p server initialized OK
+2024-08-28 12:32:33.423	    ffffadc28010	INFO	global	src/daemon/rpc.h:63	Initializing core RPC server...
+2024-08-28 12:32:33.424	    ffffadc28010	INFO	global	contrib/epee/include/net/http_server_impl_base.h:79	Binding on 0.0.0.0 (IPv4):28081
+2024-08-28 12:32:33.428	    ffffadc28010	INFO	global	src/daemon/rpc.h:69	core RPC server initialized OK on port: 28081
+2024-08-28 12:32:33.429	    ffffadc28010	INFO	global	src/daemon/rpc.h:74	Starting core RPC server...
+2024-08-28 12:32:33.430	[SRV_MAIN]	INFO	global	src/daemon/rpc.h:79	core RPC server started ok
+2024-08-28 12:32:33.430	[SRV_MAIN]	INFO	global	src/daemon/p2p.h:79	Starting p2p net loop...
+2024-08-28 12:32:34.197	[P2P0]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	
+2024-08-28 12:32:34.198	[P2P0]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	**********************************************************************
+2024-08-28 12:32:34.198	[P2P0]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	You are now synchronized with the network. You may now start monero-wallet-cli.
+2024-08-28 12:32:34.198	[P2P0]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	
+2024-08-28 12:32:34.198	[P2P0]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	Use the "help" command to see the list of available commands.
+2024-08-28 12:32:34.201	[P2P0]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:2496	**********************************************************************
+2024-08-28 12:32:34.433	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:32:34.435	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	**********************************************************************
+2024-08-28 12:32:34.435	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	The daemon will start synchronizing with the network. This may take a long time to complete.
+2024-08-28 12:32:34.436	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:32:34.436	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	You can set the level of process detailization through "set_log <level|categories>" command,
+2024-08-28 12:32:34.438	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	where <level> is between 0 (no details) and 4 (very verbose), or custom category based levels (eg, *:WARNING).
+2024-08-28 12:32:34.438	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	
+2024-08-28 12:32:34.443	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	Use the "help" command to see the list of available commands.
+2024-08-28 12:32:34.447	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	Use "help <command>" to see a command's documentation.
+2024-08-28 12:32:34.448	[P2P6]	INFO	global	src/cryptonote_core/cryptonote_core.cpp:1818	**********************************************************************
+2024-08-28 12:32:34.731	[P2P6]	WARNING	net.dns	src/common/dns_utils.cpp:343	Invalid DNSSEC TXT record signature for updates.moneropulse.org: validation failure <updates.moneropulse.org. TXT IN>: no signatures from 127.0.0.11 for trust anchor . while building chain of trust
+2024-08-28 12:32:54.811	    ffff99865010	INFO	logging	contrib/epee/src/mlog.cpp:273	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.ssl:FATAL,net.p2p:FATAL,net.cn:FATAL,daemon.rpc:FATAL,global:INFO,verify:FATAL,serialization:FATAL,daemon.rpc.payment:ERROR,stacktrace:INFO,logging:INFO,msgwriter:INFO
+2024-08-28 12:32:54.811	    ffff99865010	INFO	global	src/daemon/main.cpp:309	Monero 'Fluorine Fermi' (v0.18.3.3-release)
+2024-08-28 12:32:54.812	    ffff99865010	INFO	global	src/daemon/protocol.h:53	Initializing cryptonote protocol...
+2024-08-28 12:32:54.812	    ffff99865010	INFO	global	src/daemon/protocol.h:58	Cryptonote protocol initialized OK
+2024-08-28 12:32:54.813	    ffff99865010	INFO	global	src/daemon/core.h:64	Initializing core...
+2024-08-28 12:32:54.818	    ffff99865010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:523	Loading blockchain from folder ./.localnet/xmr_local/node2/testnet/lmdb ...
+2024-08-28 12:32:54.904	    ffff99865010	INFO	global	src/cryptonote_core/cryptonote_core.cpp:698	Loading checkpoints
+2024-08-28 12:32:54.906	    ffff99865010	INFO	global	src/daemon/core.h:81	Core initialized OK
+2024-08-28 12:32:54.906	    ffff99865010	INFO	global	src/daemon/p2p.h:64	Initializing p2p server...
+2024-08-28 12:32:54.922	    ffff99865010	INFO	global	src/daemon/core.h:102	Deinitializing core...
+2024-08-28 12:32:54.926	    ffff99865010	INFO	global	src/daemon/protocol.h:75	Stopping cryptonote protocol...
+2024-08-28 12:32:54.927	    ffff99865010	INFO	global	src/daemon/protocol.h:79	Cryptonote protocol stopped successfully
+2024-08-28 12:32:54.927	    ffff99865010	ERROR	daemon	src/daemon/main.cpp:377	Exception in main! Failed to initialize p2p server.
