@@ -169,7 +169,11 @@ services:
       "--rpc-login=rpc_user:abc123",
       "--rpc-access-control-origins=http://localhost:8080",
       "--wallet-dir=./.localnet",
+      "--rpc-bind-ip=0.0.0.0",
+      "--confirm-external-bind",
     ]
     network_mode: "host"
     depends_on:
       - arbitrator
+    ports:
+      - "28084:28084"

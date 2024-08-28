@@ -527,7 +527,6 @@ beforeAll(async () => {
     let err;
     for (const config of TestConfig.startupHavenods) promises.push(initHaveno(config));
     for (const settledPromise of await Promise.allSettled(promises)) {
-      console.log(settledPromise);
       if (settledPromise.status === "fulfilled") startupHavenods.push((settledPromise as PromiseFulfilledResult<HavenoClient>).value);
       else if (!err) err = new Error((settledPromise as PromiseRejectedResult).reason);
     }
