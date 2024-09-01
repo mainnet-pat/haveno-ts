@@ -36,7 +36,7 @@ services:
       "--no-zmq",
       "--add-exclusive-node=node2:28080",
       "--rpc-access-control-origins='*'",
-      "--fixed-difficulty=10",
+      "--fixed-difficulty=150",
       "--non-interactive",
     ]
     ports:
@@ -62,7 +62,7 @@ services:
       "--no-zmq",
       "--add-exclusive-node=node1:48080",
       "--rpc-access-control-origins='*'",
-      "--fixed-difficulty=10",
+      "--fixed-difficulty=150",
       "--non-interactive",
     ]
     ports:
@@ -184,9 +184,11 @@ services:
       "--rpc-bind-port=28084",
       "--rpc-login=rpc_user:abc123",
       "--rpc-access-control-origins='*'",
-      "--wallet-dir=./.localnet",
+      "--wallet-dir=./.localnet/funding_wallet",
     ]
     depends_on:
       - node2
     ports:
       - "127.0.0.1:28084:28084"
+    volumes:
+      - ./data:/home/haveno/haveno/.localnet/funding_wallet
